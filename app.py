@@ -69,6 +69,8 @@ def get_checklist_structure():
                 "Correcta visualización de la pelvis renal y de los cálices.",
                 "Visualización de la unión pielo-ureteral y de todo el trayecto de los uréteres.",
                 "Reproducción de toda el área vesical.",
+                "Borde hepático",
+                "Borde esplénico"
             ],
             "Detalles importantes de la imagen": [
                 "Detalles caliciales: 0,3 mm.",
