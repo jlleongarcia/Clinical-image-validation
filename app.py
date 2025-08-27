@@ -28,9 +28,14 @@ def get_checklist_structure():
         },
         "2. CRÁNEO PA y LATERAL": {
             "Criterios de imagen": [
-                "Visualización de senos frontales, celdas etmoidales, punta del peñasco y conductos auditivos internos.",
+                "Visualización de senos frontales.",
+                "Visualización de celdas etmoidales.",
+                "Visualización de punta del peñasco.",
+                "Visualización de conductos auditivos internos.",
                 "Buena definición de las tablas interna y externa de la bóveda craneal.",
-                "Reproducción nítida de surcos vasculares, vértex y estructura trabecular del cráneo (lateral).",
+                "Reproducción nítida de los surcos vasculares.",
+                "Reproducción nítida del vértex.",
+                "Reproducción nítida de la estructura trabecular del cráneo (lateral)."
             ],
             "Detalles importantes de la imagen": [
                 "Detalles (Cráneo): 0,3-0,5 mm",
@@ -65,9 +70,6 @@ def get_checklist_structure():
                 "Visualización de los contornos renales.",
                 "Visualización de los contornos del psoas.",
                 "Correcta reproducción de los huesos.",
-                "Aumento de densidad del parénquima (efecto nefrográfico).",
-                "Correcta visualización de la pelvis renal y de los cálices.",
-                "Visualización de la unión pielo-ureteral y de todo el trayecto de los uréteres.",
                 "Reproducción de toda el área vesical.",
                 "Borde hepático",
                 "Borde esplénico"
@@ -138,12 +140,16 @@ def create_app():
     # --- Render sections with checkboxes ---
     for header, sub_sections in checklist_structure.items():
         st.header(header)
-        for sub_header, items_list in sub_sections.items():
-            st.subheader(sub_header)
-            for item in items_list:
-                st.session_state.checkbox_states[item] = st.checkbox(
-                    item, value=st.session_state.checkbox_states.get(item, False), key=item
-                )
+        # Use columns to create an indented block for the sub-sections.
+        # The first column acts as a margin.
+        _, content_col = st.columns([1, 20])
+        with content_col:
+            for sub_header, items_list in sub_sections.items():
+                st.subheader(sub_header)
+                for item in items_list:
+                    st.session_state.checkbox_states[item] = st.checkbox(
+                        item, value=st.session_state.checkbox_states.get(item, False), key=item
+                    )
 
     # --- Save and Generate Files ---
     if st.button("Guardar y Generar Archivos"):
