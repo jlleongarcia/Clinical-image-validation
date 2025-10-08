@@ -180,7 +180,7 @@ def create_app():
             st.download_button(
                 label="Descargar Excel (.xlsx)",
                 data=st.session_state.excel_buffer,
-                file_name="checklist_status.xlsx",
+                file_name="DX26.xlsx",
                 mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
             )
         with col2:
