@@ -38,7 +38,7 @@ def get_checklist_structure():
                 "Reproducción nítida de la estructura trabecular del cráneo (lateral)."
             ],
             "Detalles importantes de la imagen": [
-                "Detalles (Cráneo): 0,3-0,5 mm",
+                "Detalles (Cráneo): 0,3-0,5 mm.",
             ],
         },
         "3. COLUMNA LUMBAR AP/PA y LATERAL": {
@@ -53,7 +53,7 @@ def get_checklist_structure():
                 "Reproducción de las articulaciones sacroilíacas (AP o PA).",
             ],
             "Detalles importantes de la imagen": [
-                "Detalles (Columna Lumbar): 0,3-0,5 mm",
+                "Detalles (Columna Lumbar): 0,3-0,5 mm.",
             ],
         },
         "4. PELVIS": {
@@ -62,7 +62,7 @@ def get_checklist_structure():
                 "Reproducción correcta de la cortical y la esponjosa de los trocánteres.",
             ],
             "Detalles importantes de la imagen": [
-                "Detalles: 0,5 mm",
+                "Detalles: 0,5 mm.",
             ],
         },
         "5. ABDOMEN AP Y APARATO URINARIO": {
@@ -71,12 +71,12 @@ def get_checklist_structure():
                 "Visualización de los contornos del psoas.",
                 "Correcta reproducción de los huesos.",
                 "Reproducción de toda el área vesical.",
-                "Borde hepático",
-                "Borde esplénico"
+                "Borde hepático.",
+                "Borde esplénico."
             ],
             "Detalles importantes de la imagen": [
                 "Detalles caliciales: 0,3 mm.",
-                "Calcificaciones: 1 mm",
+                "Calcificaciones: 1 mm.",
             ],
         },
     }
