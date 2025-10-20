@@ -70,13 +70,22 @@ def get_checklist_structure():
                 "Visualización de los contornos renales.",
                 "Visualización de los contornos del psoas.",
                 "Correcta reproducción de los huesos.",
-                "Reproducción de toda el área vesical.",
                 "Borde hepático.",
                 "Borde esplénico."
             ],
             "Detalles importantes de la imagen": [
-                "Detalles caliciales: 0,3 mm.",
                 "Calcificaciones: 1 mm.",
+            ],
+        },
+        "6. ESTUDIOS CON CONTRASTE (RELLENAR EN CASO DE HABERLOS)": {
+            "Criterios de imagen": [
+                "Aumento de densidad del parénquima (efecto nefrográfico).",
+                "Correcta visualización de la pelvis renal y de los cálices.",
+                "Visualización de la unión pielo-ureteral y de todo el trayecto de los uréteres.",
+                "Reproducción de toda el área vesical.",
+            ],
+            "Detalles importantes de la imagen": [
+                "Detalles caliciales: 0,3 mm.",
             ],
         },
     }
