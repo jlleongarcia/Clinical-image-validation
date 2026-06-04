@@ -12,31 +12,72 @@ This is a simple web application built with Streamlit to help validate the quali
 
 ## Prerequisites
 
-- It is highly recommended uv for package management. Otherwise, Python 3.8+.
+- [Docker](https://docs.docker.com/get-docker/) — recommended, no Python install required.
+- **Or** Python 3.9+ with [uv](https://github.com/astral-sh/uv) (recommended) or plain pip.
+- [GNU Make](https://www.gnu.org/software/make/) — optional, simplifies Docker commands (available via `choco install make` on Windows).
 
 ## Setup and Installation
 
-1.  **Clone the repository (optional):**
-    If you have git, you can clone the repository.
+### Option A — Docker (recommended)
+
+1.  **Clone the repository:**
     ```bash
     git clone https://github.com/jlleongarcia/Clinical-image-validation.git
     cd Clinical-image-validation
     ```
 
-2.  **Create virtual environment:**
-    Open your terminal or command prompt in the project directory and install the required Python packages.
+2.  **Build and run with a single command:**
     ```bash
-    uv init
+    make up
+    ```
+    This builds the Docker image and starts the container. The app will be available at `http://localhost:8503`.
+
+    Without `make`, use the equivalent Docker commands:
+    ```bash
+    docker build -t clinical-image-validation .
+    docker run -d --name clinical-image-validation -p 8503:8503 clinical-image-validation
     ```
 
-## How to Run the Application
+    To use [uv](https://github.com/astral-sh/uv) inside the container instead of pip:
+    ```bash
+    make build-uv
+    make run
+    ```
 
-1.  Navigate to the project directory in your terminal.
-2.  Run the following command:
+#### Makefile reference
+
+| Command | Description |
+|---|---|
+| `make up` | Build image and start container |
+| `make down` | Stop and remove the container |
+| `make logs` | Stream live container logs |
+| `make clean` | Stop container and delete the image |
+
+---
+
+### Option B — Local Python (uv)
+
+1.  **Clone the repository:**
+    ```bash
+    git clone https://github.com/jlleongarcia/Clinical-image-validation.git
+    cd Clinical-image-validation
+    ```
+
+2.  **Install dependencies and run:**
     ```bash
     uv run main.py
     ```
-3.  The application will run on port 8503 by default.
+
+### Option C — Local Python (pip)
+
+```bash
+pip install -r requirements.txt
+python main.py
+```
+
+## How to Run the Application
+
+The application runs on port **8503** by default. Open `http://localhost:8503` in your browser after starting it via any of the methods above.
 
 ## How to Use
 
