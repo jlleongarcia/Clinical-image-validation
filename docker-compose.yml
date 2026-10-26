@@ -1,0 +1,8 @@
+services:
+  clinical-image-validation:
+    image: ghcr.io/jlleongarcia/clinical-image-validation:latest
+    build: .
+    container_name: clinical-image-validation
+    ports:
+      - "8503:8503"
+    restart: always

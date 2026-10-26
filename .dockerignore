@@ -1,8 +1,11 @@
-.venv/
+.venv
+.git
 __pycache__/
 *.py[oc]
-.git/
-.gitignore
-README.md
-Makefile
-*.md
+build/
+dist/
+*.egg-info
+Dockerfile
+docker-compose.yml
+.dockerignore
+.github
